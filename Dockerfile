@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y wget git python3 python3-pip
 RUN wget -q -O - \
 "https://github.com/getzola/zola/releases/download/v0.9.0/zola-v0.9.0-x86_64-unknown-linux-gnu.tar.gz" \
 | tar xzf - -C /usr/local/bin
-RUN pip3 install awscli --upgrade --user
+RUN pip3 install awscli --upgrade
 
 COPY entrypoint.sh /entrypoint.sh
 
